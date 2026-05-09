@@ -1,0 +1,159 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #e2e8f0;
+  scroll-behavior: smooth;
+  background-color: #0f172a;
+}
+
+/* Parallax Images */
+
+.pimg1 {
+  background-image: url(images/Emblem11.jpg);
+  min-height: 100%;
+}
+
+.pimg2 {
+  background-image: url(images/lotus12.jpg);
+  min-height: 450px;
+}
+
+.pimg3 {
+  background-image: url(images/Tiger13.jpg);
+  min-height: 450px;
+}
+
+.pimg1,
+.pimg2,
+.pimg3 {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* Dark overlay effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pimg1::before,
+.pimg2::before,
+.pimg3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+/* Text on Image */
+
+.ptext {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  animation: fadeIn 1.5s ease;
+}
+
+.textBg {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  color: #f8fafc;
+  padding: 18px 35px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Sections */
+
+.section {
+  padding: 70px 100px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.section p {
+  font-size: 18px;
+  line-height: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Light Section */
+
+.section-light {
+  background: linear-gradient(135deg, #f8fafc, #dbeafe);
+  color: #1e293b;
+}
+
+.section-light h2 {
+  color: #2563eb;
+}
+
+/* Dark Section */
+
+.section-dark {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+}
+
+.section-dark h2 {
+  color: #60a5fa;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .ptext {
+    font-size: 20px;
+    letter-spacing: 4px;
+    padding: 0 10px;
+  }
+
+  .textBg {
+    padding: 14px 20px;
+  }
+
+  .section {
+    padding: 50px 25px;
+  }
+
+  .section h2 {
+    font-size: 30px;
+  }
+
+  .section p {
+    font-size: 16px;
+  }
+}
